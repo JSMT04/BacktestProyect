@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Play, Plus, X, Settings2, Code, LayoutTemplate, Save, Download } from 'lucide-react';
+import { Play, Plus, X, Settings2, Code, LayoutTemplate, Save } from 'lucide-react';
 import Editor from '@monaco-editor/react';
 import useStrategyStore from '../../stores/strategyStore';
 import useChartStore from '../../stores/chartStore';
 import useBacktestStore from '../../stores/backtestStore';
 import { runBacktest, listStrategies, createStrategy, getStrategy } from '../../services/api';
 
-const INDICATOR_OPTIONS = ['SMA', 'EMA', 'RSI', 'MACD', 'PRICE'];
 const OPERATOR_OPTIONS = [
   { value: 'greater_than', label: '>' },
   { value: 'less_than', label: '<' },

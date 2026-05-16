@@ -1,9 +1,10 @@
 import { create } from 'zustand';
+import type { PositionType, CommissionType, ConditionOperator } from '../types';
 
 export interface StrategyCondition {
   id: string;
   indicator_a: { type: string; params: Record<string, any>; source?: string };
-  operator: string;
+  operator: ConditionOperator;
   indicator_b?: { type: string; params: Record<string, any>; source?: string };
   value?: number;
 }
@@ -14,9 +15,9 @@ interface StrategyStore {
   code: string;
   initialCapital: number;
   positionValue: number;
-  positionType: string;
+  positionType: PositionType;
   commissionValue: number;
-  commissionType: string;
+  commissionType: CommissionType;
   stopLossValue: number;
   takeProfitValue: number;
   
@@ -28,8 +29,8 @@ interface StrategyStore {
   setEditorMode: (mode: 'visual' | 'code') => void;
   setCode: (code: string) => void;
   setCapital: (v: number) => void;
-  setPosition: (v: number, t: string) => void;
-  setCommission: (v: number, t: string) => void;
+  setPosition: (v: number, t: PositionType) => void;
+  setCommission: (v: number, t: CommissionType) => void;
   setStops: (sl: number, tp: number) => void;
   addEntryCondition: (cond: Omit<StrategyCondition, 'id'>) => void;
   removeEntryCondition: (id: string) => void;
