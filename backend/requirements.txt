@@ -1,0 +1,39 @@
+# === Framework & Server ===
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+
+# === Database ===
+sqlalchemy>=2.0.0
+aiosqlite>=0.20.0
+
+# === Validation & Config ===
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+
+# === Data Sources ===
+yfinance>=0.2.40
+ccxt>=4.3.0
+alpha-vantage>=2.3.1
+
+# === Data Processing ===
+pandas>=2.2.0
+numpy>=1.26.0
+pandas-ta-classic>=0.1.0
+pyarrow>=16.0.0
+
+# === Backtesting Engine ===
+vectorbt>=1.0.0
+
+# === Reports ===
+reportlab>=4.2.0
+Pillow>=10.3.0
+
+# === Security ===
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# === Environment ===
+python-dotenv>=1.0.1
+
+# === WebSocket ===
+websockets>=12.0
